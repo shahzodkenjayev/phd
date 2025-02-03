@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     try {
-        $stmt = $pdo->prepare("INSERT INTO users (username, mac_address, password, role) VALUES (?, ?, ?, ?)");
+        $stmt = $pdo->prepare("INSERT INTO user (username, mac_address, password, role) VALUES (?, ?, ?, ?)");
         $stmt->execute([$username, $mac_address, $password, $role]);
         header("Location: ../views/admin_panel.php");
     } catch (PDOException $e) {
