@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Tizimga kirish</h2>
+    <form action="../backend/controllers/auth.php" method="post">
+        <input type="text" name="username" placeholder="Foydalanuvchi nomi" required>
+        <input type="password" name="password" placeholder="Parol" required>
+        <button type="submit">Kirish</button>
+    </form>
+
+    <h2>Faylga ruxsat berish</h2>
+    <form action="../backend/controllers/file_access.php" method="post">
+        <input type="text" name="file_path" placeholder="Fayl yo'li" required>
+        <input type="text" name="file_name" placeholder="Fayl nomi" required>
+        <input type="number" name="role" placeholder="Ruxsat darajasi (1-20)" min="1" max="20" required>
+        <button type="submit">Tasdiqlash</button>
+    </form>
+</body>
+</html>
