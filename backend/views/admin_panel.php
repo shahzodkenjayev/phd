@@ -2,7 +2,7 @@
 require_once '../config/database.php';
 
 // Foydalanuvchilarni chiqarish
-$stmt = $pdo->query("SELECT id, username, mac_address, role FROM users");
+$stmt = $pdo->query("SELECT id, username, mac_address, role FROM user");
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
